@@ -1,0 +1,74 @@
+[custom]
+;不要随意改变关键字，否则会导致出错
+;参考blackmatrix7规则
+
+
+;设置规则begin
+;ruleset=REJECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.list
+ruleset=⚠️ PT,https://raw.githubusercontent.com/ShawsFOR/remote-config-for-clash/refs/heads/main/pt.list
+ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.list
+ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.list
+ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPs/ChinaIPs.list
+ruleset=DIRECT,[]DOMAIN-KEYWORD,asus
+ruleset=🎥 PLEX,[]DOMAIN-KEYWORD,plex
+ruleset=Ⓜ️ Micsoft,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list
+ruleset=🍎 Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list
+ruleset=🛒 Amazon,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Amazon/Amazon.list
+ruleset=⚠ Speedtest,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.list
+ruleset=📲 Telegram,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list
+ruleset=📹 Youtube,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
+ruleset=🎥 Netflix,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list
+ruleset=🏰 Disney+,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.list
+ruleset=🎶 Spotify,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.list
+ruleset=🎮 任天堂,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.list
+ruleset=🎮 Steam,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.list
+ruleset=🎮 Epic,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list
+;ruleset=💿 FlowerCloud Emby,[]DOMAIN,emby.flowercloud.yt
+;ruleset=🎭 Pilipili,[]DOMAIN-KEYWORD,pilipili
+;ruleset=🗑️ 垃圾Emby,[]DOMAIN-KEYWORD,loseremby
+;ruleset=🗑️ 垃圾Emby,[]DOMAIN-SUFFIX,emby.ml
+ruleset=🤖 ChatGPT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
+ruleset=🚀 节点选择,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.list
+ruleset=DIRECT,[]GEOIP,CN
+ruleset=🐟 漏网之鱼,[]FINAL
+;设置规则end
+
+
+;设置分组begin
+custom_proxy_group=🚀 节点选择`select`[]♻️ 自动选择`[]DIRECT`.*
+;custom_proxy_group=🌼☁️FlowerCloud`select`(IEPL|Traffic|💣 Expire)
+;custom_proxy_group=🎯 手动切换`select`.*
+custom_proxy_group=♻️ 自动选择`url-test`.*`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=⚠️ PT`select`[]DIRECT`[]🚀 节点选择`[]HOME
+custom_proxy_group=🎥 PLEX`select`[]🚀 节点选择`[]♻️ 自动选择`[]DIRECT`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=🎮 任天堂`select`[]DIRECT`[]🚀 节点选择`[]🇺🇲 美国节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=🎮 Steam`select`[]DIRECT`[]🚀 节点选择`[]🇺🇲 美国节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=🎮 Epic`select`[]DIRECT`[]🚀 节点选择`[]🇺🇲 美国节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=📲 Telegram`select`[]🚀 节点选择`[]♻️ 自动选择`[]🇸🇬 狮城节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=📹 Youtube`select`[]🚀 节点选择`[]🇸🇬 狮城节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=🎥 Netflix`select`[]🚀 节点选择`[]🇸🇬 狮城节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=🏰 Disney+`select`[]🚀 节点选择`[]🇸🇬 狮城节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=🎶 Spotify`select`[]🚀 节点选择`[]🇸🇬 狮城节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🗺 其他国家节点`;[]🎯 手动切换`[]DIRECT
+custom_proxy_group=⚠ Speedtest`select`[]🚀 节点选择`[]🇸🇬 狮城节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🗺 其他国家节点`;[]🎯 手动切换`[]DIRECT
+;custom_proxy_group=💿 FlowerCloud Emby`select`(实验)
+;custom_proxy_group=🎭 Pilipili`select`[]DIRECT`[]🚀 节点选择`[]🇺🇲 美国节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🗺 其他国家节点`;[]🎯 手动切换
+;custom_proxy_group=🗑️ 垃圾Emby`select`[]DIRECT`[]🚀 节点选择`[]🇺🇲 美国节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=Ⓜ️ Micsoft`select`[]DIRECT`[]🚀 节点选择`[]🇺🇲 美国节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=🍎 Apple`select`[]DIRECT`[]🚀 节点选择`[]🇺🇲 美国节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=🛒 Amazon`select`[]DIRECT`[]🚀 节点选择`[]🇺🇲 美国节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=🤖 ChatGPT`select`[]DIRECT`[]🚀 节点选择`[]🇺🇲 美国节点`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=🐟 漏网之鱼`select`[]🚀 节点选择`[]♻️ 自动选择`[]DIRECT`[]🇭🇰 香港节点`[]🇹🇼 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🗺 其他国家节点`;[]🎯 手动切换
+custom_proxy_group=🇭🇰 香港节点`select`(香港|HK|Hong Kong)
+custom_proxy_group=🇯🇵 日本节点`select`(日本|JP|Japan)
+custom_proxy_group=🇺🇲 美国节点`select`(美国|US|United States)
+custom_proxy_group=🇹🇼 台湾节点`select`(台湾|TW|Taiwan)
+custom_proxy_group=🇸🇬 狮城节点`select`(新加坡|狮城|SG|Singapore)
+custom_proxy_group=🗺 其他国家节点`select`(^((?!(香港|台湾|日本|新加坡|美国)).)*$)
+;设置分组end
+
+
+enable_rule_generator=true
+overwrite_original_rules=true
+
+
+;luck
